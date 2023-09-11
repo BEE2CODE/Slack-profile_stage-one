@@ -1,39 +1,35 @@
-// var date = new Date('6/29/2023 4:52:48 PM UTC');
-// date.toString()
-
-// console.log(date)
-
-
-
-
-const displayCurrentDay = document.querySelector(".currentDayOfTheWeek");
+const currentDayOfTheWeek = document.querySelector(".currentDayOfTheWeek")
 const displayCurrentUtcTime = document.querySelector(".currentUTCTime");
 
-const getUserDate = () => {
-  const userDate = new Date();
-  console.log(userDate);
+const getDate = () =>{
+  const today =new Date();
+  const day = today.getDay();
+  const dayList = [ "",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursay",
+      "Friday",
+      "Saturday",
+      "Sunday",
+    ];
 
-  const days = [
-    "",
-    "monday",
-    "tuesday",
-    "wednesday",
-    "thursay",
-    "friday",
-    "saturday",
-    "sunday",
-  ];
+    let dispalyCurrentDay = ("Today is : " + dayList[day])
+    currentDayOfTheWeek.textContent = dispalyCurrentDay
 
-  const dayFigure = userDate.getDay();
-  const day = days[dayFigure];
+    const utcMilliSeconds = Date.now();
+    displayCurrentUtcTime.textContent = utcMilliSeconds;
+}
 
-  const utcMilliSeconds = Date.now();
-  displayCurrentDay.textContent = day;
-  displayCurrentUtcTime.textContent = utcMilliSeconds;
-};
+getDate();
+setInterval(getDate, 1000);
 
-getUserDate();
-setInterval(getUserDate, 1000);
+
+
+
+
+
+
 
 
 
