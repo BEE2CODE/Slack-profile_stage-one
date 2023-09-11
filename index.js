@@ -14,7 +14,7 @@ const getDate = () =>{
       "Sunday",
     ];
 
-    let dispalyCurrentDay = ("Today is : " + dayList[day])
+    let dispalyCurrentDay = ( dayList[day])
     currentDayOfTheWeek.textContent = dispalyCurrentDay
 
     const utcMilliSeconds = Date.now();
