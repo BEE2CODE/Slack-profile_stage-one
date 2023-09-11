@@ -25,10 +25,10 @@ img{
     align-items: center;
     margin: 100px auto;
     border-radius: 12px;
+    padding-left: 22px;
    
 }
 .slackDisplayImage  {
-    padding-left: 30px;
     border-radius: 50%;
     
   }
